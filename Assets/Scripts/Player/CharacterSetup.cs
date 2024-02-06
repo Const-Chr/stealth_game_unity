@@ -48,9 +48,11 @@ public class CharacterSetup : MonoBehaviour
             
             GameObject button = Instantiate(buttonPrefab, savedGamesButtonsParent);
             string fileName = Path.GetFileName(file);
-            if (fileName == "SoundSettings.json")
+            if ((fileName == "SoundSettings.json") || (fileName.EndsWith(".log")))
+            {
+                Destroy(button);
                 continue;
-
+            }
             string name = fileName.Split('_')[0];
             button.GetComponent<SavedGameButton>().Init(() => {
                 button.name = fileName;

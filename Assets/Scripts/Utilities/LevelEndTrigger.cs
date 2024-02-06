@@ -21,11 +21,11 @@ public class LevelEndTrigger : MonoBehaviour
         {
             CollisionDeath.endGame = true;
             PlayerData.Instance.UpdateTimeElapsedForLevel(gameTimer.GetTimeElapsed());
-            Debug.Log("Game Won!");
+            Debug.Log("ESCAPED!");
             //disable box collider
             GetComponent<BoxCollider>().enabled = false;
             //game won
-            NotificationManager.Instance.AddNotification("Game Won!", 5f);
+            NotificationManager.Instance.AddNotification("ESCAPED!", 5f);
 
            
             // Load character selection scene when any button is pressed
