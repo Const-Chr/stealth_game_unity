@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraMoveSpeed: 1
   camFollowObj: {fileID: 1580197076}
-  clampAngleMin: -5
+  clampAngleMin: 25
   clampAngleMax: 80
   inputSensitivity: 1500
   cam: {fileID: 963194225}
